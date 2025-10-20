@@ -1,0 +1,11 @@
+# Use Alpine Linux as base image
+FROM alpine:latest
+
+# Install Git
+RUN apk update && apk add git
+
+# Verify Git installation
+RUN git --version
+
+# Default command to keep container running
+CMD ["sh"]
